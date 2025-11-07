@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
 import { products } from "@/lib/data";
 
 export const metadata = { title: "Products – Frahman & Brothers" };
@@ -13,7 +14,7 @@ export default function ProductsPage() {
             All products are sourced through official government channels to guarantee authenticity and meet national quality standards. Our fertilizers are transported in covered vehicles and stored in modern, secure godowns to preserve their efficacy.
           </p>
           <p className="text-gray-600">
-            <strong>Note:</strong> Prices are indicative and subject to change. Please <a href="/contact" className="text-green-700 font-semibold hover:underline">contact us</a> for current rates and availability.
+            <strong>Note:</strong> Prices are indicative and subject to change. Please <Link href="/contact" className="text-green-700 font-semibold hover:underline">contact us</Link> for current rates and availability.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
