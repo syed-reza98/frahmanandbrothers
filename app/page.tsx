@@ -24,14 +24,24 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card p-8">
-            <div className="aspect-video rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-              <div className="text-center p-6">
-                <h3 className="text-2xl font-bold text-blue-800 mb-2">Quality & Reliability</h3>
-                <p className="text-blue-700">Serving farmers across Bangladesh with pride</p>
+          <div className="card overflow-hidden">
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <Image
+                src="/frahmanandbrothers/hero.jpg"
+                alt="Quality & Reliability - Frahman & Brothers fertilizer distribution"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end">
+                <div className="text-center p-6 w-full">
+                  <h3 className="text-2xl font-bold text-white mb-2">Quality & Reliability</h3>
+                  <p className="text-blue-100">Serving farmers across Bangladesh with pride</p>
+                </div>
               </div>
             </div>
-            <p className="mt-6 text-sm text-gray-600 leading-relaxed">
+            <p className="mt-6 px-8 pb-8 text-sm text-gray-600 leading-relaxed">
               <strong>Our Process:</strong> Government-certified sourcing → Temperature-controlled storage → Verified retail distribution → Farm-level success
             </p>
           </div>
@@ -83,11 +93,11 @@ export default function HomePage() {
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: "/projects-01.jpg", alt: "Fertilizer distribution project supporting local farmers" },
-            { src: "/projects-02.jpg", alt: "Quality fertilizer products stored in secure facility" },
-            { src: "/projects-03.jpg", alt: "Agricultural field fertilization project" },
-            { src: "/projects-04.jpg", alt: "Successful crop harvest after fertilizer application" },
-            { src: "/projects-05.jpg", alt: "Fertilizer delivery to verified retail partners" },
+            { src: "/frahmanandbrothers/projects-01.jpg", alt: "Fertilizer distribution project supporting local farmers" },
+            { src: "/frahmanandbrothers/projects-02.jpg", alt: "Quality fertilizer products stored in secure facility" },
+            { src: "/frahmanandbrothers/projects-03.jpg", alt: "Agricultural field fertilization project" },
+            { src: "/frahmanandbrothers/projects-04.jpg", alt: "Successful crop harvest after fertilizer application" },
+            { src: "/frahmanandbrothers/projects-05.jpg", alt: "Fertilizer delivery to verified retail partners" },
           ].map((project, idx) => (
             <div key={idx} className="card overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative aspect-video">
