@@ -55,7 +55,7 @@ export default function SupplyChainPage() {
               <div>
                 <h4 className="font-bold text-green-700 text-lg mb-3">🔒 Product Integrity</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  From government depot to farmer's field, we maintain strict quality controls. Our covered transport and modern storage facilities ensure products remain effective and uncontaminated.
+                  From government depot to farmer&apos;s field, we maintain strict quality controls. Our covered transport and modern storage facilities ensure products remain effective and uncontaminated.
                 </p>
               </div>
               <div>
