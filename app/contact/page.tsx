@@ -15,13 +15,17 @@ export default function ContactPage() {
             <div className="font-bold text-xl text-gray-800 mb-4">Reach us directly</div>
             <div className="space-y-4">
               <div>
-                <div className="text-sm font-semibold text-green-700 mb-1">📞 Phone</div>
+                <div className="text-sm font-semibold text-green-700 mb-1">
+                  <span aria-label="Phone">📞</span> Phone
+                </div>
                 <a href="tel:+8801750188004" className="text-gray-700 hover:text-green-700 font-medium">
                   +880 1750 188 004
                 </a>
               </div>
               <div>
-                <div className="text-sm font-semibold text-green-700 mb-1">✉️ Email</div>
+                <div className="text-sm font-semibold text-green-700 mb-1">
+                  <span aria-label="Email">✉️</span> Email
+                </div>
                 <a href="mailto:info@frahmanandbrothers.com" className="text-gray-700 hover:text-green-700 font-medium">
                   info@frahmanandbrothers.com
                 </a>
@@ -31,7 +35,9 @@ export default function ContactPage() {
                 </a>
               </div>
               <div>
-                <div className="text-sm font-semibold text-green-700 mb-1">📍 Address</div>
+                <div className="text-sm font-semibold text-green-700 mb-1">
+                  <span aria-label="Address">📍</span> Address
+                </div>
                 <p className="text-gray-700">
                   Kawkhali, South Bazar<br />
                   Pirojpur, Bangladesh

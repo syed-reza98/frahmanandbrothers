@@ -34,7 +34,7 @@ export default function SupplyChainPage() {
           {steps.map((s) => (
             <div key={s.step} className="relative">
               <div className="card p-6 h-full hover:shadow-lg transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold shadow-lg">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold shadow-lg" aria-hidden="true">
                   {s.step}
                 </div>
                 <div className="text-xl font-bold text-gray-800 mb-3 mt-2">{s.title}</div>
