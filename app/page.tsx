@@ -83,11 +83,11 @@ export default function HomePage() {
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: "/projects-01.jpg", alt: "Agricultural project 1" },
-            { src: "/projects-02.jpg", alt: "Agricultural project 2" },
-            { src: "/projects-03.jpg", alt: "Agricultural project 3" },
-            { src: "/projects-04.jpg", alt: "Agricultural project 4" },
-            { src: "/projects-05.jpg", alt: "Agricultural project 5" },
+            { src: "/projects-01.jpg", alt: "Fertilizer distribution project supporting local farmers" },
+            { src: "/projects-02.jpg", alt: "Quality fertilizer products stored in secure facility" },
+            { src: "/projects-03.jpg", alt: "Agricultural field fertilization project" },
+            { src: "/projects-04.jpg", alt: "Successful crop harvest after fertilizer application" },
+            { src: "/projects-05.jpg", alt: "Fertilizer delivery to verified retail partners" },
           ].map((project, idx) => (
             <div key={idx} className="card overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative aspect-video">

@@ -15,8 +15,11 @@ export default function AboutPage() {
             <li><strong>Reliable Service:</strong> Our efficient logistics network guarantees timely delivery, right when you need it.</li>
             <li><strong>Expert Support:</strong> Our team offers knowledgeable advice to help you select the right products for your specific soil and crop needs.</li>
           </ul>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Our team is here with the right knowledge and reliable service to help your farm succeed.
+          </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Our team is here with the right knowledge and reliable service to help your farm succeed. With state-of-the-art storage facilities, temperature-controlled transport, and an expert team, we maintain the highest standards of quality control from procurement to final delivery.
+            With state-of-the-art storage facilities, temperature-controlled transport, and an expert team, we maintain the highest standards of quality control from procurement to final delivery.
           </p>
         </div>
       </Section>
