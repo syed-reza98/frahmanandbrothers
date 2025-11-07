@@ -10,28 +10,28 @@ export default function HomePage() {
       <section className="container py-16 md:py-24">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
-            <p className="text-sm tracking-widest uppercase text-green-700 font-semibold">Fertilizer Distribution</p>
+            <p className="text-sm tracking-widest uppercase text-blue-700 font-semibold">Premium Fertilizer Distribution</p>
             <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Your trusted partner in <span className="gradient-text">agricultural growth</span>
             </h1>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              Supplying verified retailers with quality fertilizers for bountiful harvests. Government-verified sourcing, protected storage, and efficient distribution to verified retailers.
+              Delivering excellence in fertilizer distribution across Bangladesh. We supply verified retailers with premium-quality fertilizers sourced from government-certified depots, ensuring authenticity, safety, and reliable supply for bountiful harvests.
             </p>
             <div className="mt-8 flex items-center gap-4 flex-wrap">
               <Link href="/products"><Button>Browse Products</Button></Link>
-              <Link href="/contact" className="text-sm font-semibold text-green-700 hover:text-green-800 underline underline-offset-4">Get a Quote</Link>
+              <Link href="/contact" className="text-sm font-semibold text-blue-700 hover:text-blue-800 underline underline-offset-4">Get a Quote</Link>
             </div>
           </div>
 
           <div className="card p-8">
-            <div className="aspect-video rounded-lg bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+            <div className="aspect-video rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
               <div className="text-center p-6">
-                <h3 className="text-2xl font-bold text-green-800 mb-2">Quality & Reliability</h3>
-                <p className="text-green-700">Serving farmers across Bangladesh</p>
+                <h3 className="text-2xl font-bold text-blue-800 mb-2">Quality & Reliability</h3>
+                <p className="text-blue-700">Serving farmers across Bangladesh with pride</p>
               </div>
             </div>
             <p className="mt-6 text-sm text-gray-600 leading-relaxed">
-              <strong>Our Process:</strong> Sourcing from government depots → Secure storage → Distribution to verified retailers
+              <strong>Our Process:</strong> Government-certified sourcing → Temperature-controlled storage → Verified retail distribution → Farm-level success
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <Section title="Featured Products" eyebrow="Quality & Reliability">
         <p className="text-gray-600 mb-8 max-w-3xl">
-          We supply high-quality fertilizers sourced directly from government godowns. All products meet national quality standards and are delivered with full traceability.
+          We supply premium-grade fertilizers sourced exclusively from government-certified godowns. Every product meets stringent national quality standards with complete traceability from depot to delivery, ensuring maximum crop productivity and farmer satisfaction.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
@@ -53,17 +53,17 @@ export default function HomePage() {
           {[
             { 
               title: "Government-Verified", 
-              text: "We procure fertilizers directly from official government godowns to eliminate counterfeit products and ensure each batch meets national quality standards.",
+              text: "We procure fertilizers directly from official government godowns, eliminating counterfeit products and ensuring every batch meets rigorous national quality standards with full documentation and certification.",
               icon: "✓"
             },
             { 
               title: "Protected Storage", 
-              text: "Products are transported in dedicated covered vehicles and stored in our modern, secure godowns that maintain optimal conditions to preserve product efficacy.",
+              text: "Our state-of-the-art godowns feature climate control, moisture protection, and 24/7 security. Products are transported in specialized covered vehicles to maintain integrity from depot to destination.",
               icon: "⚡"
             },
             { 
               title: "Efficient Distribution", 
-              text: "We distribute fertilizers exclusively to pre-verified retail stores, ensuring consistent supply, product integrity and reliable local access for farmers.",
+              text: "We partner exclusively with pre-verified retail stores across our service regions, ensuring consistent supply, product authenticity, and reliable access for farmers when they need it most.",
               icon: "🚚"
             },
           ].map((f) => (
@@ -77,13 +77,13 @@ export default function HomePage() {
       </Section>
 
       <section className="container py-12 md:py-16">
-        <div className="card p-8 md:p-12 bg-gradient-to-br from-green-50 to-white">
+        <div className="card p-8 md:p-12 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               A Few Words About Us
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Frahman & Brothers is <strong>the vital link in your agricultural supply chain</strong>. As a trusted fertilizer distributor, we source quality products from government suppliers and deliver them efficiently to local retailers, ensuring farmers have reliable access to the inputs they need for bountiful harvests.
+              Frahman & Brothers is <strong>the vital link in your agricultural supply chain</strong>. As a premier fertilizer distributor with decades of trusted service, we source premium-quality products from government-certified suppliers and deliver them efficiently to verified local retailers. Our commitment ensures farmers have reliable access to the genuine inputs they need for exceptional harvests and sustainable agricultural growth.
             </p>
             <Link href="/about">
               <Button>Learn More About Us</Button>

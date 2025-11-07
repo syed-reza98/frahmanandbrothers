@@ -4,27 +4,27 @@ export const products = [
     price: "৳1,330 / bag",
     composition: "Nitrogen (N)",
     description:
-      "High-purity nitrogen fertilizer for vigorous plant growth and green foliage. Nitrogen is the cornerstone of chlorophyll; the fast-acting granules ensure quick absorption and support lush vegetative growth.",
+      "Premium high-purity nitrogen fertilizer essential for vigorous plant growth and lush green foliage. Nitrogen is the fundamental cornerstone of chlorophyll production; our fast-acting granules ensure rapid absorption and support robust vegetative growth, maximizing crop yields and plant health.",
   },
   {
     name: "Triple Super Phosphate (TSP)",
     price: "৳1,330 / bag",
     composition: "46% P₂O₅",
     description:
-      "Supplies soluble phosphorus to stimulate strong root development, improve seedling establishment, and promote flower and fruit formation. Essential for better yields and healthier crops.",
+      "Supplies highly soluble phosphorus to stimulate strong, extensive root development, enhance seedling establishment, and promote abundant flower and fruit formation. Essential for achieving better yields, healthier crops, and improved agricultural productivity across all soil types.",
   },
   {
     name: "Muriate of Potash (MOP)",
     price: "৳980 / bag",
     composition: "60% K₂O",
     description:
-      "Provides soluble potash to help regulate water uptake, improve drought resistance, and bolster immunity to disease. Enhances size, color, taste, and shelf-life of fruits and grains.",
+      "Provides premium soluble potash to regulate water uptake efficiency, significantly improve drought resistance, and bolster natural immunity to diseases and pests. Enhances size, color, taste, nutritional value, and extended shelf-life of fruits, vegetables, and grains for superior market quality.",
   },
   {
     name: "Di-Ammonium Phosphate (DAP)",
     price: "Contact for pricing",
     composition: "18% N, 46% P₂O₅",
     description:
-      "A dual-nutrient fertilizer providing both nitrogen and phosphorus. Ideal for promoting early root development and overall plant growth. Suitable for a wide range of crops and soil types.",
+      "A superior dual-nutrient fertilizer providing both essential nitrogen and phosphorus in optimal proportions. Ideal for promoting early-stage root development and overall comprehensive plant growth. Highly suitable for a wide range of crops, diverse soil types, and various agricultural applications.",
   },
 ];
