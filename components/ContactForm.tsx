@@ -34,7 +34,7 @@ export default function ContactForm() {
         value={formData.name}
         onChange={handleChange}
         placeholder="Your Name" 
-        className="rounded-md border-2 border-green-200 bg-white p-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-100" 
+        className="rounded-md border-2 border-blue-200 bg-white p-3 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" 
       />
       <input 
         name="email" 
@@ -43,7 +43,7 @@ export default function ContactForm() {
         value={formData.email}
         onChange={handleChange}
         placeholder="Email" 
-        className="rounded-md border-2 border-green-200 bg-white p-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-100" 
+        className="rounded-md border-2 border-blue-200 bg-white p-3 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" 
       />
       <textarea 
         name="message" 
@@ -51,7 +51,7 @@ export default function ContactForm() {
         value={formData.message}
         onChange={handleChange}
         placeholder="How can we help?" 
-        className="min-h-32 rounded-md border-2 border-green-200 bg-white p-3 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-100" 
+        className="min-h-32 rounded-md border-2 border-blue-200 bg-white p-3 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" 
       />
       <div className="flex items-center gap-3">
         <Button type="submit">Send Message</Button>

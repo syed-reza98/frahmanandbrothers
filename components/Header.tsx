@@ -18,7 +18,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-green-200 bg-white/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-40 border-b border-blue-200 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image 
@@ -38,7 +38,7 @@ export default function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-sm font-medium transition-colors hover:text-green-600 ${active ? "text-green-700 font-semibold" : "text-gray-700"}`}
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${active ? "text-blue-700 font-semibold" : "text-gray-700"}`}
               >
                 {l.label}
               </Link>
@@ -48,7 +48,7 @@ export default function Header() {
 
         <button
           aria-label="Open menu"
-          className="md:hidden rounded-lg border border-green-300 px-4 py-2 text-green-700 hover:bg-green-50"
+          className="md:hidden rounded-lg border border-blue-300 px-4 py-2 text-blue-700 hover:bg-blue-50"
           onClick={() => setOpen((s) => !s)}
         >
           Menu
@@ -56,13 +56,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-green-200 bg-white">
+        <div className="md:hidden border-t border-blue-200 bg-white">
           <div className="container py-4 flex flex-col gap-3">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="py-2 text-sm text-gray-700 hover:text-green-700 font-medium"
+                className="py-2 text-sm text-gray-700 hover:text-blue-700 font-medium"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
