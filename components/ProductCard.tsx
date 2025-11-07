@@ -7,13 +7,13 @@ type Props = {
 
 export default function ProductCard({ name, price, description, composition }: Props) {
   return (
-    <div className="card p-5">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">{name}</h3>
-        {price && <span className="text-emerald-500 font-medium">{price}</span>}
+    <div className="card p-6 hover:shadow-lg transition-shadow">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-xl font-bold text-gray-800">{name}</h3>
+        {price && <span className="text-green-700 font-bold text-lg">{price}</span>}
       </div>
-      {composition && <p className="text-xs text-gray-500 mt-1">{composition}</p>}
-      <p className="mt-3 text-gray-600 dark:text-gray-300">{description}</p>
+      {composition && <p className="text-sm text-green-600 font-medium mb-3">{composition}</p>}
+      <p className="mt-3 text-gray-600 leading-relaxed">{description}</p>
     </div>
   );
 }

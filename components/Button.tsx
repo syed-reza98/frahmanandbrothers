@@ -4,7 +4,7 @@ export default function Button(props: ComponentProps<"button">) {
   const { className = "", ...rest } = props;
   return (
     <button
-      className={`rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-sm font-medium text-emerald-600 transition hover:bg-emerald-500 hover:text-white focus:outline-none focus:ring focus:ring-emerald-400/40 dark:text-emerald-300 ${className}`}
+      className={`rounded-lg border-2 border-green-600 bg-green-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700 hover:border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
       {...rest}
     />
   );

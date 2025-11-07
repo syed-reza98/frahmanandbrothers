@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Frahman & Brothers – Fertilizer Distributor",
   description:
-    "Government-verified sourcing, protected storage, and efficient distribution to verified retailers.",
+    "Your trusted partner in agricultural growth. Government-verified sourcing, protected storage, and efficient distribution to verified retailers across Bangladesh.",
   metadataBase: new URL("https://syed-reza98.github.io"),
   openGraph: {
     title: "Frahman & Brothers",
     description:
-      "Trusted partner in agricultural growth across Bangladesh.",
+      "Trusted partner in agricultural growth across Bangladesh. Quality fertilizers from government sources.",
     type: "website",
   },
   alternates: { canonical: "/frahmanandbrothers" },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
         <Header />
         <main>{children}</main>

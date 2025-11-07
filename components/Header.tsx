@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -17,20 +18,27 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-white/70 backdrop-blur-md dark:bg-black/50">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight text-xl">
-          <span className="gradient-text">Frahman&nbsp;&amp;&nbsp;Brothers</span>
+    <header className="sticky top-0 z-40 border-b border-green-200 bg-white/95 backdrop-blur-md shadow-sm">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/logo.png" 
+            alt="Frahman & Brothers" 
+            width={200}
+            height={59}
+            priority
+            className="h-auto w-auto max-h-14"
+          />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => {
             const active = pathname === l.href;
             return (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-sm transition hover:text-emerald-500 ${active ? "text-emerald-500 font-medium" : "text-gray-500 dark:text-gray-300"}`}
+                className={`text-sm font-medium transition-colors hover:text-green-600 ${active ? "text-green-700 font-semibold" : "text-gray-700"}`}
               >
                 {l.label}
               </Link>
@@ -40,7 +48,7 @@ export default function Header() {
 
         <button
           aria-label="Open menu"
-          className="md:hidden rounded-lg border border-white/10 px-3 py-1.5"
+          className="md:hidden rounded-lg border border-green-300 px-4 py-2 text-green-700 hover:bg-green-50"
           onClick={() => setOpen((s) => !s)}
         >
           Menu
@@ -48,13 +56,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-white/70 backdrop-blur-md dark:bg-black/60">
-          <div className="container py-3 flex flex-col gap-2">
+        <div className="md:hidden border-t border-green-200 bg-white">
+          <div className="container py-4 flex flex-col gap-3">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                className="py-2 text-sm text-gray-700 hover:text-green-700 font-medium"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
