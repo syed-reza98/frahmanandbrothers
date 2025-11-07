@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/Button";
 import Section from "@/components/Section";
 import ProductCard from "@/components/ProductCard";
@@ -71,6 +72,33 @@ export default function HomePage() {
               <div className="text-4xl mb-4">{f.icon}</div>
               <div className="text-xl font-bold text-gray-800 mb-3">{f.title}</div>
               <p className="text-gray-600 leading-relaxed">{f.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Recent Projects" eyebrow="Our Work">
+        <p className="text-gray-600 mb-8 max-w-3xl">
+          Explore our portfolio of successful fertilizer distribution projects across Bangladesh. We take pride in delivering quality products that help farmers achieve exceptional harvests and sustainable agricultural growth.
+        </p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { src: "/projects-01.jpg", alt: "Agricultural project 1" },
+            { src: "/projects-02.jpg", alt: "Agricultural project 2" },
+            { src: "/projects-03.jpg", alt: "Agricultural project 3" },
+            { src: "/projects-04.jpg", alt: "Agricultural project 4" },
+            { src: "/projects-05.jpg", alt: "Agricultural project 5" },
+          ].map((project, idx) => (
+            <div key={idx} className="card overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="relative aspect-video">
+                <Image
+                  src={project.src}
+                  alt={project.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
             </div>
           ))}
         </div>

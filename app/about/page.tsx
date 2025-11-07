@@ -8,38 +8,16 @@ export default function AboutPage() {
       <Section title="Who We Are" eyebrow="About Us">
         <div className="max-w-4xl">
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Frahman & Brothers is a <strong>premier distributor of premium-quality fertilizers</strong> serving verified retailers across Bangladesh with unwavering commitment to excellence. Since our establishment, we have built a reputation for authenticity, safety, and punctual supply that strengthens regional agriculture and empowers farmers to achieve exceptional, bountiful harvests year after year.
+            Frahman & Brothers is a <strong>premier distributor of high-quality fertilizers</strong> for farms of all sizes. Our foundation is built on three core pillars:
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            As <strong>the vital link in your agricultural supply chain</strong>, we source superior-grade fertilizers directly from government-certified suppliers and deliver them efficiently to local retailers through our advanced logistics network. Our comprehensive approach ensures farmers have reliable, timely access to the genuine inputs they need to maximize productivity and profitability.
-          </p>
+          <ul className="text-lg text-gray-700 leading-relaxed mb-6 list-disc list-inside space-y-2">
+            <li><strong>Quality Products:</strong> We source our fertilizers from reputable manufacturers, ensuring purity and effectiveness.</li>
+            <li><strong>Reliable Service:</strong> Our efficient logistics network guarantees timely delivery, right when you need it.</li>
+            <li><strong>Expert Support:</strong> Our team offers knowledgeable advice to help you select the right products for your specific soil and crop needs.</li>
+          </ul>
           <p className="text-lg text-gray-700 leading-relaxed">
-            With our state-of-the-art storage facilities, temperature-controlled transport, and expert team, we maintain the highest standards of quality control from procurement to final delivery. Our dedication to transparency, traceability, and customer satisfaction has made us the preferred choice for retailers and farmers throughout our service regions.
+            Our team is here with the right knowledge and reliable service to help your farm succeed. With state-of-the-art storage facilities, temperature-controlled transport, and an expert team, we maintain the highest standards of quality control from procurement to final delivery.
           </p>
-        </div>
-      </Section>
-
-      <Section title="Our Core Pillars" eyebrow="What Drives Us">
-        <div className="grid gap-8 md:grid-cols-3 mb-12">
-          {[
-            {
-              title: "Premium Quality Products",
-              description: "We source fertilizers exclusively from government-certified manufacturers and official godowns to guarantee absolute purity and authenticity. Every single batch undergoes rigorous quality testing, meets stringent national standards, and comes with complete traceability documentation for your peace of mind."
-            },
-            {
-              title: "Unwavering Reliable Service",
-              description: "Our sophisticated logistics network and fleet of specialized vehicles guarantee punctual delivery to verified retailers across our service area. We maintain optimal climate-controlled storage conditions with 24/7 monitoring and utilize covered transport to preserve maximum product efficacy and prevent any degradation."
-            },
-            {
-              title: "Expert Support & Guidance",
-              description: "Our highly knowledgeable team of agricultural specialists offers comprehensive, personalized guidance to help retailers and farmers select the precisely right fertilizers for their specific crop requirements, soil conditions, and environmental factors to achieve optimal results."
-            }
-          ].map((pillar) => (
-            <div key={pillar.title} className="card p-6 text-center">
-              <h3 className="text-xl font-bold text-blue-700 mb-3">{pillar.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
-            </div>
-          ))}
         </div>
       </Section>
 
@@ -66,10 +44,10 @@ export default function AboutPage() {
       <Section title="Our Commitment" eyebrow="Excellence">
         <div className="grid gap-6 md:grid-cols-4">
           {[
-            { title: "Fastest Shipping", text: "Advanced logistics infrastructure and efficient route optimization ensure fastest possible delivery to all our verified retail partners across regions." },
-            { title: "Premium Quality", text: "Government-verified, certified premium products sourced exclusively from official depots with comprehensive traceability and quality documentation." },
-            { title: "Best Competitive Offers", text: "Competitive pricing structures and reliable, uninterrupted supply chains deliver exceptional value to our trusted retail partners." },
-            { title: "Secure Payment Systems", text: "Safe, transparent, and flexible payment systems with multiple options for all transactions, ensuring convenience and trust." },
+            { title: "Fastest Shipping", text: "We ensure timely and reliable delivery of our quality fertilizers to farms and partners across the area." },
+            { title: "Best Quality", text: "We source only the purest, most effective fertilizers to ensure the health of your soil and the success of your harvest." },
+            { title: "Best Offers", text: "Get exceptional value with our competitive pricing and special deals designed to support farmers of all sizes." },
+            { title: "Secure Payments", text: "Enjoy a hassle-free checkout with our safe payment system, guaranteeing your transaction's security." },
           ].map((highlight) => (
             <div key={highlight.title} className="text-center p-4">
               <div className="w-16 h-16 rounded-full bg-blue-600 mx-auto mb-3 flex items-center justify-center text-white text-2xl">
