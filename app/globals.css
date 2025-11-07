@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* CSS variables for light theme with green agricultural colors */
+  --color-bg: 255 255 255;
+  --color-fg: 31 41 55; /* gray-800 */
+  --color-muted: 107 114 128; /* gray-500 */
+  --color-brand: 34 139 34; /* forest green */
+  --color-brand-light: 76 175 80; /* lighter green */
+  --color-accent: 139 69 19; /* earth brown */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--color-fg));
+  background: linear-gradient(135deg, rgba(34, 139, 34, 0.05) 0%, rgba(255, 255, 255, 1) 50%, rgba(139, 69, 19, 0.05) 100%);
+  background-attachment: fixed;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Reusable shadows / card */
+.card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: rgba(34, 139, 34, 0.15);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Fancy gradient text */
+.gradient-text {
+  background-image: linear-gradient(to right, rgb(34 139 34), rgb(76 175 80));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
