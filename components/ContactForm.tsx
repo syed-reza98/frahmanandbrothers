@@ -27,7 +27,7 @@ export default function ContactForm() {
       <textarea name="message" required placeholder="How can we help?" className="min-h-28 rounded-md border border-white/20 bg-transparent p-3" />
       <div className="flex items-center gap-3">
         <Button type="submit" disabled={state==="sending"}>{state==="sending" ? "Sending…" : "Send Message"}</Button>
-        {state==="sent" && <span className="text-emerald-500 text-sm">Thanks! We'll be in touch.</span>}
+        {state==="sent" && <span className="text-emerald-500 text-sm">Thanks! We&apos;ll be in touch.</span>}
         {state==="error" && <span className="text-red-500 text-sm">Something went wrong.</span>}
       </div>
     </form>
