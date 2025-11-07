@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* CSS variables for theming */
+  --color-bg: 255 255 255;
+  --color-fg: 17 24 39;
+  --color-muted: 107 114 128;
+  --color-brand: 16 185 129; /* emerald-500 */
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-bg: 2 6 23;
+    --color-fg: 226 232 240;
+    --color-muted: 148 163 184;
+    --color-brand: 52 211 153; /* emerald-400 */
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--color-fg));
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(16,185,129,.15), transparent 60%),
+              rgb(var(--color-bg));
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Reusable shadows / card */
+.card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Fancy gradient text */
+.gradient-text {
+  background-image: linear-gradient(to right, rgb(52 211 153), rgb(20 184 166));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
