@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
+import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Frahman & Brothers – Fertilizer Distributor",
@@ -20,11 +21,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organizationSchema = getOrganizationSchema();
+  const localBusinessSchema = getLocalBusinessSchema();
+
   return (
     <html lang="en">
       <head>
         <link rel="manifest" href="/frahmanandbrothers/manifest.json" />
         <meta name="theme-color" content="#0b63d6" />
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
       </head>
       <body>
         <Header />
