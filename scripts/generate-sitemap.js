@@ -10,6 +10,7 @@ const routes = [
   '/contact',
   '/products',
   '/resources',
+  '/blog',
   '/supply-chain'
 ];
 

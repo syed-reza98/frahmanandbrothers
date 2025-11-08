@@ -1,0 +1,104 @@
+{
+  "en": {
+    "common": {
+      "siteName": "F. Rahman & Brothers",
+      "tagline": "Your trusted partner in agricultural growth",
+      "viewProducts": "View Products",
+      "getQuote": "Get Quote",
+      "contactUs": "Contact Us",
+      "downloadSpec": "Download Specification",
+      "downloadSDS": "Safety Data Sheet"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "products": "Products",
+      "resources": "Resources",
+      "supplyChain": "Supply Chain",
+      "contact": "Contact"
+    },
+    "products": {
+      "title": "Our Products",
+      "subtitle": "Premium Fertilizers for Agricultural Excellence",
+      "urea": {
+        "name": "Urea",
+        "composition": "Nitrogen (N): 46%",
+        "description": "High-purity nitrogen fertilizer for vigorous plant growth and vibrant green foliage."
+      },
+      "tsp": {
+        "name": "Triple Super Phosphate (TSP)",
+        "composition": "Phosphorus (P₂O₅): 46%",
+        "description": "Powerful source of soluble Phosphorus for strong root development and flowering."
+      },
+      "mop": {
+        "name": "Muriate of Potash (MOP)",
+        "composition": "Potassium (K₂O): 60%",
+        "description": "Essential for overall plant health, drought resistance, and crop quality."
+      },
+      "dap": {
+        "name": "Di-Ammonium Phosphate (DAP)",
+        "composition": "Nitrogen (N): 18%, Phosphorus (P₂O₅): 46%",
+        "description": "Superior dual-nutrient fertilizer for early-stage root development."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Your Partner in Growth",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "location": "Kawkhali, South Bazar, Pirojpur, Bangladesh"
+    }
+  },
+  "bn": {
+    "common": {
+      "siteName": "এফ. রহমান অ্যান্ড ব্রাদার্স",
+      "tagline": "কৃষি উন্নয়নে আপনার বিশ্বস্ত সহযোগী",
+      "viewProducts": "পণ্য দেখুন",
+      "getQuote": "মূল্য জানুন",
+      "contactUs": "যোগাযোগ করুন",
+      "downloadSpec": "বিবরণ ডাউনলোড করুন",
+      "downloadSDS": "নিরাপত্তা তথ্য পত্র"
+    },
+    "nav": {
+      "home": "হোম",
+      "about": "আমাদের সম্পর্কে",
+      "products": "পণ্য",
+      "resources": "সম্পদ",
+      "supplyChain": "সরবরাহ শৃঙ্খল",
+      "contact": "যোগাযোগ"
+    },
+    "products": {
+      "title": "আমাদের পণ্য",
+      "subtitle": "কৃষি উৎকর্ষতার জন্য প্রিমিয়াম সার",
+      "urea": {
+        "name": "ইউরিয়া",
+        "composition": "নাইট্রোজেন (N): ৪৬%",
+        "description": "শক্তিশালী উদ্ভিদ বৃদ্ধি এবং প্রাণবন্ত সবুজ পাতার জন্য উচ্চ-বিশুদ্ধতা নাইট্রোজেন সার।"
+      },
+      "tsp": {
+        "name": "ট্রিপল সুপার ফসফেট (TSP)",
+        "composition": "ফসফরাস (P₂O₅): ৪৬%",
+        "description": "শক্তিশালী শিকড় বিকাশ এবং ফুল ফোটার জন্য দ্রবণীয় ফসফরাসের শক্তিশালী উৎস।"
+      },
+      "mop": {
+        "name": "মিউরিয়েট অফ পটাশ (MOP)",
+        "composition": "পটাসিয়াম (K₂O): ৬০%",
+        "description": "সামগ্রিক উদ্ভিদ স্বাস্থ্য, খরা প্রতিরোধ এবং ফসলের গুণমানের জন্য অপরিহার্য।"
+      },
+      "dap": {
+        "name": "ডাই-অ্যামোনিয়াম ফসফেট (DAP)",
+        "composition": "নাইট্রোজেন (N): ১৮%, ফসফরাস (P₂O₅): ৪৬%",
+        "description": "প্রাথমিক পর্যায়ে শিকড় বিকাশের জন্য উচ্চতর দ্বৈত-পুষ্টি সার।"
+      }
+    },
+    "contact": {
+      "title": "যোগাযোগ করুন",
+      "subtitle": "বৃদ্ধিতে আপনার অংশীদার",
+      "phone": "ফোন",
+      "email": "ইমেইল",
+      "address": "ঠিকানা",
+      "location": "কাউখালী, সাউথ বাজার, পিরোজপুর, বাংলাদেশ"
+    }
+  }
+}

@@ -45,3 +45,6 @@ next-env.d.ts
 /public/sds
 /public/guides
 /public/reports
+
+# lighthouse reports
+/.lighthouseci
