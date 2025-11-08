@@ -1,0 +1,23 @@
+{
+  "name": "F. Rahman & Brothers",
+  "short_name": "Frahman&Bros",
+  "start_url": "/frahmanandbrothers/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b63d6",
+  "description": "Your trusted partner in agricultural growth. Quality fertilizers from government sources.",
+  "icons": [
+    {
+      "src": "/frahmanandbrothers/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/frahmanandbrothers/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

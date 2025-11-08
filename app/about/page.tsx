@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = { title: "About – Frahman & Brothers" };
 
@@ -22,6 +23,84 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 leading-relaxed">
             With state-of-the-art storage facilities, temperature-controlled transport, and an expert team, we maintain the highest standards of quality control from procurement to final delivery.
           </p>
+        </div>
+      </Section>
+
+      <Section title="Certifications & Quality Assurance" eyebrow="Trust & Compliance">
+        <div className="max-w-4xl mb-8">
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            As an authorized distributor of government-certified fertilizers, we maintain the highest standards of quality, safety, and compliance. Our certifications demonstrate our commitment to excellence and regulatory adherence.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="card p-6 text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-blue-100 rounded-full">
+              <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-800 mb-3">Quality Certification</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Certified for maintaining highest quality standards in storage, handling, and distribution.
+            </p>
+            <Link 
+              href="/frahmanandbrothers/certs/quality-certification.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800 hover:underline"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              View Certificate
+            </Link>
+          </div>
+          
+          <div className="card p-6 text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-green-100 rounded-full">
+              <svg className="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-800 mb-3">Government Authorization</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Authorized distributor of government-certified agricultural fertilizers.
+            </p>
+            <Link 
+              href="/frahmanandbrothers/certs/government-authorization.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800 hover:underline"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              View Authorization
+            </Link>
+          </div>
+          
+          <div className="card p-6 text-center hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-purple-100 rounded-full">
+              <svg className="w-8 h-8 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-800 mb-3">Standards Compliance</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Full compliance with national quality standards (IS specifications).
+            </p>
+            <Link 
+              href="/frahmanandbrothers/certs/standards-compliance.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800 hover:underline"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              View Compliance
+            </Link>
+          </div>
         </div>
       </Section>
 
