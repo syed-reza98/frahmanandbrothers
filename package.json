@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "optimize:images": "node scripts/optimize-images.js",
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:pdfs": "node scripts/generate-pdfs.js"
   },
   "dependencies": {
     "jspdf": "^3.0.3",

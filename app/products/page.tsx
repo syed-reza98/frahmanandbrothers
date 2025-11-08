@@ -13,9 +13,14 @@ export default function ProductsPage() {
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             All products are sourced exclusively through official government-certified channels to guarantee absolute authenticity and meet stringent national quality standards. Our premium fertilizers are transported in specialized climate-controlled, covered vehicles and stored in modern, secure godowns with 24/7 monitoring to preserve their maximum efficacy and ensure optimal crop performance.
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 mb-4">
             <strong>Note:</strong> Prices are indicative and subject to market variations. Please <Link href="/contact" className="text-blue-700 font-semibold hover:underline">contact us</Link> for current competitive rates, bulk pricing, seasonal offers, and product availability in your region.
           </p>
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+            <p className="text-sm text-gray-700">
+              <strong className="text-blue-700">📄 Technical Specifications Available:</strong> Each product includes a detailed specification sheet with composition, standards compliance (IS specifications), application guidelines, and storage instructions. Click &quot;Download Technical Specification&quot; on any product below.
+            </p>
+          </div>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {products.map((p) => <ProductCard key={p.name} {...p} />)}
