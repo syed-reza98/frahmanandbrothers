@@ -1,26 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // Component to show personalized CTA based on last viewed product
 export default function PersonalizedCTA() {
-  const [ctaData, setCTAData] = useState<{ product: string; show: boolean } | null>(() => {
-    if (typeof window === 'undefined') return null;
-    
-    const stored = localStorage.getItem('lastViewedProduct');
-    const date = localStorage.getItem('lastViewedDate');
-    
-    if (stored && date) {
-      const viewedDate = new Date(date);
-      const daysSince = (Date.now() - viewedDate.getTime()) / (1000 * 60 * 60 * 24);
+  const [ctaData, setCTAData] = useState<{ product: string; show: boolean } | null>(null);
+
+  // Read from localStorage on mount to avoid hydration mismatch
+  useEffect(() => {
+    // Use a microtask to avoid synchronous setState in effect
+    Promise.resolve().then(() => {
+      const stored = localStorage.getItem('lastViewedProduct');
+      const date = localStorage.getItem('lastViewedDate');
       
-      if (daysSince < 7) {
-        return { product: stored, show: true };
+      if (stored && date) {
+        const viewedDate = new Date(date);
+        const daysSince = (Date.now() - viewedDate.getTime()) / (1000 * 60 * 60 * 24);
+        
+        if (daysSince < 7) {
+          setCTAData({ product: stored, show: true });
+          return;
+        }
       }
-    }
-    return null;
-  });
+      setCTAData(null);
+    });
+  }, []);
 
   const handleClose = () => {
     setCTAData(prev => prev ? { ...prev, show: false } : null);

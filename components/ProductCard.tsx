@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 type Props = {
   name: string;
@@ -15,27 +14,17 @@ type Props = {
 };
 
 export default function ProductCard({ name, price, description, composition, image, specSheet, sds }: Props) {
-  useEffect(() => {
-    // Track product view in localStorage for personalization
-    const handleCardClick = () => {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('lastViewedProduct', name);
-        localStorage.setItem('lastViewedDate', new Date().toISOString());
-      }
-    };
-
-    // Add click listener to card
-    const card = document.getElementById(`product-${name.replace(/\s+/g, '-').toLowerCase()}`);
-    if (card) {
-      card.addEventListener('click', handleCardClick);
-      return () => card.removeEventListener('click', handleCardClick);
+  const handleCardClick = () => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lastViewedProduct', name);
+      localStorage.setItem('lastViewedDate', new Date().toISOString());
     }
-  }, [name]);
+  };
 
   return (
     <div 
-      id={`product-${name.replace(/\s+/g, '-').toLowerCase()}`}
-      className="card overflow-hidden hover:shadow-lg transition-shadow"
+      onClick={handleCardClick}
+      className="card overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
     >
       {image && (
         <div className="relative aspect-video w-full">

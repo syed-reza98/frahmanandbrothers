@@ -24,7 +24,8 @@ export default function LanguageSwitcher() {
   const switchLanguage = (lang: Language) => {
     setCurrentLang(lang);
     localStorage.setItem('preferredLanguage', lang);
-    // Reload page to apply language change
+    // TODO: Implement React Context for language state to avoid page reload
+    // For now, reload is necessary to apply translations throughout the app
     window.location.reload();
   };
 

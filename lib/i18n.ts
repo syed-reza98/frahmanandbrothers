@@ -13,11 +13,21 @@ export function getTranslation(lang: Language, key: string): string {
     if (value && typeof value === 'object') {
       value = value[k];
     } else {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`[i18n] Missing translation for key "${key}" in language "${lang}"`);
+      }
       return key; // Return key if translation not found
     }
   }
   
-  return typeof value === 'string' ? value : key;
+  if (typeof value === 'string') {
+    return value;
+  } else {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`[i18n] Translation value is not a string for key "${key}" in language "${lang}"`);
+    }
+    return key;
+  }
 }
 
 export function getAllTranslations(lang: Language) {
