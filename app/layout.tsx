@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
+import PersonalizedCTA from "@/components/PersonalizedCTA";
 import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <ServiceWorkerRegistration />
+        <PersonalizedCTA />
       </body>
     </html>
   );

@@ -8,11 +8,12 @@ const CERTS_DIR = path.join(process.cwd(), 'public', 'certs');
 const SDS_DIR = path.join(process.cwd(), 'public', 'sds');
 const GUIDES_DIR = path.join(process.cwd(), 'public', 'guides');
 const REPORTS_DIR = path.join(process.cwd(), 'public', 'reports');
+const DOCS_DIR = path.join(process.cwd(), 'public', 'docs');
 
 const SITE_URL = 'https://syed-reza98.github.io/frahmanandbrothers';
 
 // Ensure directories exist
-[SPECS_DIR, CERTS_DIR, SDS_DIR, GUIDES_DIR, REPORTS_DIR].forEach(dir => {
+[SPECS_DIR, CERTS_DIR, SDS_DIR, GUIDES_DIR, REPORTS_DIR, DOCS_DIR].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -1249,6 +1250,337 @@ async function generateSeasonalSchedule() {
   console.log('✓ Generated: seasonal-fertilization-schedule.pdf');
 }
 
+// Distributor Package
+async function generateDistributorPackage() {
+  const doc = new jsPDF();
+  let y = 20;
+  
+  // Add QR code
+  const qrCode = await generateQRCode(`${SITE_URL}/contact`);
+  if (qrCode) {
+    doc.addImage(qrCode, 'PNG', 170, 10, 25, 25);
+  }
+  
+  // Cover page
+  doc.setFontSize(24);
+  doc.setTextColor(11, 99, 214);
+  doc.text('DISTRIBUTOR', 105, 60, { align: 'center' });
+  doc.text('PARTNERSHIP PACKAGE', 105, 70, { align: 'center' });
+  
+  y = 90;
+  doc.setFontSize(18);
+  doc.setTextColor(0, 0, 0);
+  doc.text('F. Rahman & Brothers', 105, y, { align: 'center' });
+  
+  y += 10;
+  doc.setFontSize(12);
+  doc.setTextColor(100, 100, 100);
+  doc.text('Premium Fertilizer Distribution Opportunity', 105, y, { align: 'center' });
+  
+  y += 30;
+  doc.setFontSize(10);
+  doc.text('Kawkhali, South Bazar, Pirojpur, Bangladesh', 105, y, { align: 'center' });
+  y += 5;
+  doc.text('Phone: +880 1750-188004', 105, y, { align: 'center' });
+  y += 5;
+  doc.text('Email: info@frahmanandbrothers.com', 105, y, { align: 'center' });
+  
+  y += 20;
+  doc.setFontSize(9);
+  doc.text(`Package Date: ${new Date().toLocaleDateString()}`, 105, y, { align: 'center' });
+  
+  // Page 2: About Us
+  doc.addPage();
+  y = 20;
+  
+  doc.setFontSize(18);
+  doc.setTextColor(11, 99, 214);
+  doc.text('About F. Rahman & Brothers', 20, y);
+  
+  y += 10;
+  doc.setDrawColor(11, 99, 214);
+  doc.setLineWidth(0.5);
+  doc.line(20, y, 190, y);
+  
+  y += 10;
+  doc.setFontSize(11);
+  doc.setTextColor(0, 0, 0);
+  
+  const aboutText = [
+    'F. Rahman & Brothers is a premier distributor of high-quality fertilizers serving farmers',
+    'across Bangladesh. We specialize in government-certified products with a commitment to',
+    'quality, reliability, and expert agricultural support.',
+    '',
+    'Our Mission:',
+    'To strengthen agriculture by providing authentic, quality fertilizers and expert guidance',
+    'to farmers through a trusted network of verified retailers.',
+    '',
+    'Why Partner With Us:',
+    '✓ Government-certified products with full traceability',
+    '✓ Climate-controlled storage and handling',
+    '✓ Competitive pricing and flexible payment terms',
+    '✓ Technical support and training',
+    '✓ Proven track record of reliability',
+    '✓ Growing market presence in Bangladesh'
+  ];
+  
+  aboutText.forEach(line => {
+    doc.text(line, 20, y);
+    y += 6;
+  });
+  
+  // Page 3: Product Portfolio
+  doc.addPage();
+  y = 20;
+  
+  doc.setFontSize(18);
+  doc.setTextColor(11, 99, 214);
+  doc.text('Product Portfolio', 20, y);
+  
+  y += 10;
+  doc.line(20, y, 190, y);
+  y += 10;
+  
+  const products = [
+    {
+      name: 'Urea (46% N)',
+      price: '৳1,330/bag',
+      features: ['High-purity nitrogen', 'Fast-acting granules', 'All crops']
+    },
+    {
+      name: 'Triple Super Phosphate (TSP)',
+      price: '৳1,330/bag',
+      features: ['46% P₂O₅', 'Root development', 'Flowering support']
+    },
+    {
+      name: 'Muriate of Potash (MOP)',
+      price: '৳980/bag',
+      features: ['60% K₂O', 'Drought resistance', 'Quality improvement']
+    },
+    {
+      name: 'Di-Ammonium Phosphate (DAP)',
+      price: 'Contact for pricing',
+      features: ['18% N, 46% P₂O₅', 'Dual nutrients', 'Early growth']
+    }
+  ];
+  
+  doc.setFontSize(11);
+  products.forEach((product, idx) => {
+    if (y > 240) {
+      doc.addPage();
+      y = 20;
+    }
+    
+    doc.setFillColor(230, 240, 255);
+    doc.roundedRect(20, y - 3, 170, 25, 2, 2, 'F');
+    
+    doc.setFont(undefined, 'bold');
+    doc.setTextColor(11, 99, 214);
+    doc.text(product.name, 22, y + 2);
+    
+    doc.setFont(undefined, 'normal');
+    doc.setTextColor(0, 0, 0);
+    doc.text(product.price, 160, y + 2);
+    
+    y += 8;
+    doc.setFontSize(9);
+    product.features.forEach(feature => {
+      doc.text(`• ${feature}`, 25, y);
+      y += 5;
+    });
+    
+    y += 5;
+    doc.setFontSize(11);
+  });
+  
+  // Page 4: Partnership Benefits
+  doc.addPage();
+  y = 20;
+  
+  doc.setFontSize(18);
+  doc.setTextColor(11, 99, 214);
+  doc.text('Partnership Benefits', 20, y);
+  
+  y += 10;
+  doc.line(20, y, 190, y);
+  y += 10;
+  
+  doc.setFontSize(11);
+  doc.setTextColor(0, 0, 0);
+  
+  const benefits = [
+    {
+      title: 'Competitive Pricing',
+      desc: 'Distributor pricing with volume discounts and seasonal promotions'
+    },
+    {
+      title: 'Flexible Payment Terms',
+      desc: 'Credit facilities for verified distributors with good track record'
+    },
+    {
+      title: 'Marketing Support',
+      desc: 'Product brochures, technical data sheets, and promotional materials'
+    },
+    {
+      title: 'Technical Training',
+      desc: 'Product knowledge training and agricultural best practices'
+    },
+    {
+      title: 'Quality Assurance',
+      desc: 'All products certified with batch testing and quality reports'
+    },
+    {
+      title: 'Logistics Support',
+      desc: 'Reliable delivery schedules and inventory management assistance'
+    }
+  ];
+  
+  benefits.forEach(benefit => {
+    if (y > 250) {
+      doc.addPage();
+      y = 20;
+    }
+    
+    doc.setFont(undefined, 'bold');
+    doc.setTextColor(11, 99, 214);
+    doc.text(`✓ ${benefit.title}`, 20, y);
+    
+    y += 6;
+    doc.setFont(undefined, 'normal');
+    doc.setTextColor(60, 60, 60);
+    const lines = doc.splitTextToSize(benefit.desc, 165);
+    doc.text(lines, 25, y);
+    y += lines.length * 5 + 8;
+  });
+  
+  // Page 5: Requirements & Process
+  doc.addPage();
+  y = 20;
+  
+  doc.setFontSize(18);
+  doc.setTextColor(11, 99, 214);
+  doc.text('How to Become a Distributor', 20, y);
+  
+  y += 10;
+  doc.line(20, y, 190, y);
+  y += 10;
+  
+  doc.setFontSize(12);
+  doc.setTextColor(0, 0, 0);
+  doc.setFont(undefined, 'bold');
+  doc.text('Requirements:', 20, y);
+  
+  y += 8;
+  doc.setFontSize(11);
+  doc.setFont(undefined, 'normal');
+  
+  const requirements = [
+    'Valid business registration and trade license',
+    'Adequate storage facilities (covered, dry)',
+    'Minimum order commitment: 50 MT/month',
+    'Financial capacity for inventory investment',
+    'Established retail network or distribution channels',
+    'Good business reputation and references'
+  ];
+  
+  requirements.forEach(req => {
+    doc.text(`• ${req}`, 25, y);
+    y += 7;
+  });
+  
+  y += 8;
+  doc.setFont(undefined, 'bold');
+  doc.text('Application Process:', 20, y);
+  
+  y += 8;
+  doc.setFont(undefined, 'normal');
+  
+  const steps = [
+    '1. Submit distributor application form',
+    '2. Provide business documents and references',
+    '3. Site visit and facility assessment',
+    '4. Review and approval (5-7 business days)',
+    '5. Sign distributor agreement',
+    '6. Initial training and onboarding',
+    '7. First order placement and delivery'
+  ];
+  
+  steps.forEach(step => {
+    doc.text(step, 25, y);
+    y += 7;
+  });
+  
+  y += 10;
+  doc.setFillColor(255, 250, 240);
+  doc.setDrawColor(255, 193, 7);
+  doc.roundedRect(20, y, 170, 25, 2, 2, 'FD');
+  
+  y += 8;
+  doc.setFont(undefined, 'bold');
+  doc.setTextColor(120, 80, 0);
+  doc.text('Special Offer for New Distributors!', 25, y);
+  
+  y += 6;
+  doc.setFont(undefined, 'normal');
+  doc.text('30-day payment terms on first order', 25, y);
+  y += 5;
+  doc.text('Free marketing materials and product samples', 25, y);
+  
+  // Page 6: Contact & Next Steps
+  doc.addPage();
+  y = 40;
+  
+  doc.setFontSize(20);
+  doc.setTextColor(11, 99, 214);
+  doc.text('Ready to Partner?', 105, y, { align: 'center' });
+  
+  y += 20;
+  doc.setFontSize(12);
+  doc.setTextColor(0, 0, 0);
+  doc.text('Contact us today to start the application process', 105, y, { align: 'center' });
+  
+  y += 20;
+  doc.setFillColor(230, 240, 255);
+  doc.roundedRect(40, y, 130, 60, 3, 3, 'F');
+  
+  y += 15;
+  doc.setFontSize(14);
+  doc.setFont(undefined, 'bold');
+  doc.text('F. Rahman & Brothers', 105, y, { align: 'center' });
+  
+  y += 10;
+  doc.setFontSize(11);
+  doc.setFont(undefined, 'normal');
+  doc.text('Kawkhali, South Bazar, Pirojpur, Bangladesh', 105, y, { align: 'center' });
+  
+  y += 8;
+  doc.text('Phone: +880 1750-188004', 105, y, { align: 'center' });
+  
+  y += 6;
+  doc.text('Email: info@frahmanandbrothers.com', 105, y, { align: 'center' });
+  
+  y += 6;
+  doc.text('Website: syed-reza98.github.io/frahmanandbrothers', 105, y, { align: 'center' });
+  
+  y += 20;
+  doc.setFontSize(10);
+  doc.setTextColor(100, 100, 100);
+  doc.text('Scan QR code at top of page to contact us directly', 105, y, { align: 'center' });
+  
+  // Footer
+  y = 280;
+  doc.setDrawColor(11, 99, 214);
+  doc.setLineWidth(0.5);
+  doc.line(20, y, 190, y);
+  
+  y += 5;
+  doc.setFontSize(8);
+  doc.text(`Distributor Package v1.0 | Generated: ${new Date().toLocaleDateString()}`, 105, y, { align: 'center' });
+  
+  doc.save(path.join(DOCS_DIR, 'distributor-partnership-package.pdf'));
+  console.log('✓ Generated: distributor-partnership-package.pdf');
+}
+
 // Run generation
 async function runAll() {
   console.log('Generating product specifications...');
@@ -1272,12 +1604,16 @@ async function runAll() {
   console.log('\nGenerating seasonal fertilization schedule...');
   await generateSeasonalSchedule();
   
+  console.log('\nGenerating distributor partnership package...');
+  await generateDistributorPackage();
+  
   console.log('\n✅ All documents generated successfully!');
   console.log(`\nSpecifications: ${SPECS_DIR}`);
   console.log(`Certificates: ${CERTS_DIR}`);
   console.log(`Safety Data Sheets: ${SDS_DIR}`);
   console.log(`Application Guides: ${GUIDES_DIR}`);
   console.log(`Reports & Testimonials: ${REPORTS_DIR}`);
+  console.log(`Business Documents: ${DOCS_DIR}`);
 }
 
 runAll();
