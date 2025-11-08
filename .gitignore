@@ -40,3 +40,8 @@ next-env.d.ts
 
 # optimized images (generated during build)
 /public/optimized
+
+# generated PDFs (generated during build)
+/public/sds
+/public/guides
+/public/reports
