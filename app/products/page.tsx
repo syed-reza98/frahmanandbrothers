@@ -2,12 +2,25 @@ import Section from "@/components/Section";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 import { products } from "@/lib/data";
+import { getProductSchema } from "@/lib/schema";
 
 export const metadata = { title: "Products – Frahman & Brothers" };
 
 export default function ProductsPage() {
+  // Generate product schemas for all products
+  const productSchemas = products.map(p => getProductSchema(p));
+
   return (
     <>
+      {/* Product Schema JSON-LD */}
+      {productSchemas.map((schema, idx) => (
+        <script
+          key={idx}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      
       <Section title="Our Products" eyebrow="Catalog">
         <div className="max-w-3xl mb-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-4">

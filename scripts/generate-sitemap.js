@@ -9,6 +9,8 @@ const routes = [
   '/about',
   '/contact',
   '/products',
+  '/resources',
+  '/blog',
   '/supply-chain'
 ];
 

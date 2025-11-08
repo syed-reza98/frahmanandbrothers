@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": "urea",
+      "name": "Urea",
+      "price": "৳1,330",
+      "priceUnit": "bag",
+      "composition": "Nitrogen (N): 46%",
+      "image": "/frahmanandbrothers/Urea.jpeg",
+      "specSheet": "/frahmanandbrothers/specs/urea-specification.pdf",
+      "sds": "/frahmanandbrothers/sds/urea-sds.pdf",
+      "description": "Frahman & Brothers Urea is a high-purity nitrogen fertilizer, essential for promoting vigorous plant growth and vibrant green foliage. Nitrogen is the cornerstone of chlorophyll, which plants use to convert sunlight into energy through photosynthesis. Our fast-acting, highly soluble granules ensure quick absorption, making it ideal for giving crops a strong start and supporting lush vegetative growth throughout the season. Apply to a wide variety of crops to significantly increase biomass and overall yield potential.",
+      "benefits": [
+        "Promotes vigorous vegetative growth",
+        "Essential for chlorophyll production",
+        "Suitable for all crops - rice, wheat, sugarcane, vegetables",
+        "Quick-release nitrogen for immediate plant uptake",
+        "Can be applied as top dressing or basal application"
+      ],
+      "applicationRate": "100-200 kg/acre",
+      "standards": "IS 6382:2013",
+      "available": true
+    },
+    {
+      "id": "tsp",
+      "name": "Triple Super Phosphate (TSP)",
+      "price": "৳1,330",
+      "priceUnit": "bag",
+      "composition": "Phosphorus (P₂O₅): 46%",
+      "image": "/frahmanandbrothers/tsp.jpeg",
+      "specSheet": "/frahmanandbrothers/specs/tsp-specification.pdf",
+      "sds": "/frahmanandbrothers/sds/tsp-sds.pdf",
+      "description": "Our Triple Super Phosphate (TSP) is a powerful source of soluble Phosphorus (46% P₂O₅), a vital nutrient for energy transfer and root system development. Phosphorus is critical for stimulating strong, healthy root growth, improving seedling establishment, and promoting flower and fruit formation. TSP is designed for easy application and is an excellent choice for ensuring your plants have the energy they need to thrive, leading to more uniform flowering and higher-quality yields.",
+      "benefits": [
+        "Promotes strong root development",
+        "Essential for flowering and fruit formation",
+        "Improves seedling establishment",
+        "Ideal for phosphorus-deficient soils",
+        "Suitable for all crops, especially oilseeds and pulses"
+      ],
+      "applicationRate": "80-150 kg/acre",
+      "standards": "IS 6951:1990",
+      "available": true
+    },
+    {
+      "id": "mop",
+      "name": "Muriate of Potash (MOP)",
+      "price": "৳980",
+      "priceUnit": "bag",
+      "composition": "Potassium (K₂O): 60%",
+      "image": "/frahmanandbrothers/pota.jpg",
+      "specSheet": "/frahmanandbrothers/specs/mop-specification.pdf",
+      "description": "Muriate of Potash (MOP) from Frahman & Brothers is a primary source of soluble Potash (60% K₂O), which is crucial for overall plant health and crop quality. Potassium regulates water uptake, improves drought resistance, and enhances the plant's natural immunity to diseases. It is also essential for improving the size, color, taste, and shelf-life of fruits and grains. Use MOP to strengthen your crops against stress and enhance the marketable quality of your harvest.",
+      "benefits": [
+        "Improves crop quality and yield",
+        "Enhances drought and disease resistance",
+        "Improves fruit size, color, and taste",
+        "Essential for fruit and vegetable crops",
+        "Increases shelf life of produce"
+      ],
+      "applicationRate": "50-100 kg/acre",
+      "standards": "IS 6366:2013",
+      "available": true
+    },
+    {
+      "id": "dap",
+      "name": "Di-Ammonium Phosphate (DAP)",
+      "price": "Contact for pricing",
+      "priceUnit": "",
+      "composition": "Nitrogen (N): 18%, Phosphorus (P₂O₅): 46%",
+      "image": "/frahmanandbrothers/dap.jpg",
+      "specSheet": "/frahmanandbrothers/specs/dap-specification.pdf",
+      "description": "A superior dual-nutrient fertilizer providing both essential nitrogen and phosphorus in optimal proportions. Ideal for promoting early-stage root development and overall comprehensive plant growth. Highly suitable for a wide range of crops, diverse soil types, and various agricultural applications.",
+      "benefits": [
+        "Dual nutrient source - N and P",
+        "Excellent for early plant growth",
+        "Promotes root and shoot development",
+        "Ideal basal application for all crops",
+        "Particularly effective for cereals and oilseeds"
+      ],
+      "applicationRate": "100-150 kg/acre",
+      "standards": "IS 10109:2013",
+      "available": true
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-11-08",
+    "currency": "BDT",
+    "priceNote": "Prices are indicative and subject to market variations. Contact us for current rates.",
+    "distributor": {
+      "name": "F. Rahman & Brothers",
+      "address": "Kawkhali, South Bazar, Pirojpur, Bangladesh",
+      "phone": "+880 1750-188004",
+      "email": "info@frahmanandbrothers.com",
+      "website": "https://syed-reza98.github.io/frahmanandbrothers"
+    }
+  }
+}

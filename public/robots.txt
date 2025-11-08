@@ -1,0 +1,11 @@
+# Robots.txt for Frahman & Brothers
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://syed-reza98.github.io/frahmanandbrothers/sitemap.xml
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1

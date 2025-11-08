@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,8 +14,18 @@ type Props = {
 };
 
 export default function ProductCard({ name, price, description, composition, image, specSheet, sds }: Props) {
+  const handleCardClick = () => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lastViewedProduct', name);
+      localStorage.setItem('lastViewedDate', new Date().toISOString());
+    }
+  };
+
   return (
-    <div className="card overflow-hidden hover:shadow-lg transition-shadow">
+    <div 
+      onClick={handleCardClick}
+      className="card overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+    >
       {image && (
         <div className="relative aspect-video w-full">
           <Image

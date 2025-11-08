@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/resources", label: "Resources" },
+  { href: "/blog", label: "Blog" },
   { href: "/supply-chain", label: "Supply Chain" },
   { href: "/contact", label: "Contact" },
 ];
@@ -45,6 +47,7 @@ export default function Header() {
               </Link>
             );
           })}
+          <LanguageSwitcher />
         </nav>
 
         <button

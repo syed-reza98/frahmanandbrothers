@@ -8,14 +8,19 @@ A modern Next.js 16 website for Frahman & Brothers, a fertilizer distributor ser
 - 🎨 Modern, responsive design with dark mode support
 - 📱 Mobile-friendly navigation
 - 🚀 Static site generation for fast performance
-- 📄 SEO-optimized with metadata
+- 📄 **SEO-optimized with JSON-LD schemas** (Organization, LocalBusiness, Product, FAQ)
 - 🎯 Clean, reusable components
+- 📋 **Automated PDF generation** (specs, certifications, SDS, guides)
+- 🔍 **robots.txt and sitemap.xml** for search engines
+- 📦 **Canonical products.json** for product data
+- 🖼️ **Image optimization** (WebP/AVIF formats)
 
 ## Pages
 
 - **Home** - Main landing page with featured products
-- **About** - Company information and team
-- **Products** - Catalog of fertilizer products
+- **About** - Company information, team, and certifications
+- **Products** - Catalog of fertilizer products with technical specs
+- **Resources** - Safety data sheets, fertilization guides, quality reports
 - **Supply Chain** - Information about the distribution process
 - **Contact** - Contact form and location details
 
@@ -51,12 +56,65 @@ npm run build
 
 The static files will be generated in the `out/` directory.
 
+### Build with PDFs and Optimizations
+
+```bash
+# Generate PDFs
+npm run generate:pdfs
+
+# Optimize images
+npm run optimize:images
+
+# Build the site
+npm run build
+
+# Generate sitemap
+npm run generate:sitemap
+```
+
 ### Lint
 
 ```bash
 # Run ESLint
 npm run lint
 ```
+
+## SEO & Business Features
+
+### Automated PDF Generation
+
+The site automatically generates 14 professional PDFs during build:
+
+- **Product Specifications** (4 PDFs): Urea, TSP, MOP, DAP
+- **Certifications** (3 PDFs): Quality, Government Authorization, Standards Compliance
+- **Safety Data Sheets** (2 PDFs): Urea SDS, TSP SDS
+- **Fertilization Guides** (3 PDFs): Rice, Wheat, Seasonal Schedule
+- **Quality Reports** (2 PDFs): Batch Quality, Customer Testimonials
+
+```bash
+npm run generate:pdfs
+```
+
+### SEO Optimization
+
+- **robots.txt**: Instructs search engines how to crawl the site
+- **sitemap.xml**: Lists all pages for search engine indexing
+- **JSON-LD Schemas**: Structured data for rich search results
+  - Organization schema (company information)
+  - LocalBusiness schema (location, hours)
+  - Product schema (all 4 products)
+  - FAQ schema (resource questions)
+- **products.json**: Canonical product data source
+
+### Image Optimization
+
+```bash
+npm run optimize:images
+```
+
+Creates WebP and AVIF versions in multiple sizes for faster loading.
+
+For more details, see [SEO_IMPLEMENTATION.md](SEO_IMPLEMENTATION.md).
 
 ## Deployment to GitHub Pages
 

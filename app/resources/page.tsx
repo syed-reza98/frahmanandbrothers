@@ -1,11 +1,40 @@
 import Section from "@/components/Section";
 import Link from "next/link";
+import { getFAQSchema } from "@/lib/schema";
 
 export const metadata = { title: "Resources – Frahman & Brothers" };
 
 export default function ResourcesPage() {
+  // FAQ Schema for SEO
+  const faqs = [
+    {
+      question: "What are Safety Data Sheets (SDS)?",
+      answer: "Safety Data Sheets provide comprehensive safety information including hazard identification, first aid measures, handling and storage guidelines for our fertilizer products."
+    },
+    {
+      question: "How do I apply fertilizers correctly?",
+      answer: "Our crop-specific application guides provide detailed fertilization schedules tailored for specific crops with stage-wise application recommendations. Download our rice, wheat, or seasonal fertilization guides for specific instructions."
+    },
+    {
+      question: "Are your products certified?",
+      answer: "Yes, all our products comply with Indian Standards (IS specifications) and include quality certifications. Quality reports include digital authentication codes for verification of authenticity."
+    },
+    {
+      question: "What is the seasonal fertilization schedule for Bangladesh?",
+      answer: "Bangladesh has three main agricultural seasons: Rabi (Winter, Nov-Feb), Kharif-1 (Summer, Mar-Jun), and Kharif-2 (Monsoon, Jul-Oct). Each season requires different fertilization approaches based on the crops being grown."
+    }
+  ];
+
+  const faqSchema = getFAQSchema(faqs);
+
   return (
     <>
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
       <Section title="Agricultural Resources" eyebrow="Knowledge Center">
         <div className="max-w-4xl mb-12">
           <p className="text-lg text-gray-700 leading-relaxed">
