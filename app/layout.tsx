@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 export const metadata: Metadata = {
   title: "Frahman & Brothers – Fertilizer Distributor",
@@ -15,15 +16,21 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: { canonical: "/frahmanandbrothers" },
+  manifest: "/frahmanandbrothers/manifest.json",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/frahmanandbrothers/manifest.json" />
+        <meta name="theme-color" content="#0b63d6" />
+      </head>
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );

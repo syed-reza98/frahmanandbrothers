@@ -37,3 +37,6 @@ next-env.d.ts
 
 # playwright
 /tmp/playwright-logs
+
+# optimized images (generated during build)
+/public/optimized
